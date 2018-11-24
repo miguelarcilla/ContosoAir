@@ -1,10 +1,23 @@
 #!/usr/bin/env node
 
 /**
+ * Enable telemetry collection with Application Insights
+ */
+const dotenv = require('dotenv').config();
+const ai = require('applicationinsights');
+ai.setup(process.env.APPLICATIONINSIGHTSKEY)
+  .setAutoDependencyCorrelation(true)
+  .setAutoCollectRequests(true)
+  .setAutoCollectPerformance(true)
+  .setAutoCollectExceptions(true)
+  .setAutoCollectDependencies(true)
+  .setAutoCollectConsole(true)
+  .setUseDiskRetryCaching(true)
+  .start();
+
+/**
  * Module dependencies.
  */
-
-const dotenv = require('dotenv').config();
 const app = require('./app');
 const debug = require('debug')('contoso-air-dev:server');
 const http = require('http');

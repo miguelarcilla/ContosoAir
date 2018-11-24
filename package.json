@@ -11,6 +11,7 @@
     "all-test:watch": "jest --watch --testRegex=.*\\.i?spec\\.js$"
   },
   "dependencies": {
+    "applicationinsights": "^1.0.7",
     "bootstrap": "^4.1.3",
     "bootstrap-datepicker": "^1.8.0",
     "debug": "~2.6.9",
