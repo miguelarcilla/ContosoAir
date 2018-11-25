@@ -5,6 +5,10 @@ require('bootstrap-datepicker/dist/css/bootstrap-datepicker3.standalone.css');
 require('./scss/main.scss');
 
 $(document).ready(function(){
+    setTimeout(function() {
+        alert('Shoutout to DevCon Davao!');
+    }, 3000);
+
     var today = $('.datepicker').data('start') || new Date();
     var options = {
         format: 'yyyy-mm-dd',
